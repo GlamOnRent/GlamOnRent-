@@ -1,107 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GlamOnRent - Fashion Rental</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GlamOnRent</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f0;
       margin: 0;
       padding: 0;
-      background: #fefefe;
     }
 
-    .logo {
-      text-align: center;
+    header {
+      background-color: #ff69b4;
+      color: white;
       padding: 20px;
-    }
-
-    .logo img {logo.png
-      max-width: 220px;
-      height: auto;
-    }
-
-    .heading {
       text-align: center;
-      color: #222;
-      font-size: 28px;
-      margin-top: 10px;
+    }
+
+    header img {
+      height: 50px;
+      vertical-align: middle;
+    }
+
+    header h1 {
+      display: inline;
+      margin-left: 10px;
+      font-size: 24px;
+      vertical-align: middle;
+    }
+
+    section {
+      padding: 20px;
+      text-align: center;
     }
 
     .section {
-      padding: 30px 20px;
-      text-align: center;
-      border-bottom: 1px solid #ccc;
+      margin-bottom: 40px;
+    }
+
+    .section img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .section h2 {
-      color: #a35500;
-      margin-bottom: 10px;
-    }
-
-    .whatsapp-btn {8478901298
-      display: inline-block;
+      color: #ff1493;
       margin-top: 15px;
-      padding: 12px 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
     }
 
-    .footer {
+    .section p {
+      color: #333;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    form {
+      background: #fff;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #ff1493;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
       text-align: center;
       padding: 15px;
-      background: #111;
-      color: #fff;
-    }
-
-    .bengali-text {
-      font-size: 16px;
-      color: #444;
-      margin-top: 5px;
+      background-color: #f0f0f0;
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="GlamOnRent Logo" />
+    <h1>GlamOnRent</h1>
+  </header>
 
-  <!-- Logo -->
-  <div class="logo">
-    <img src="1000021874.png" alt="GlamOnRent Logo">
-  </div>
+  <section>
+    <p>Stylish ethnic, western, and partywear for females aged 10 to 45 — available for rent in Kolkata!</p>
+  </section>
 
-  <div class="heading">
-    GlamOnRent – Renting & Clothing <br>
-    <div class="bengali-text">গ্ল্যামার এখন ভাড়ায়</div>
-  </div>
-
-  <!-- Ethnic Wear -->
-  <div class="https://your-github-link/1000022162.jpg">
+  <section class="section">
+    <img src="1000022162.jpg" alt="Ethnic Wear">
     <h2>Ethnic Wear</h2>
     <p>Graceful sarees, lehengas, and salwar suits for weddings & festivals.</p>
     <a class="whatsapp-btn" href="https://wa.me/918478901298?text=Hi%2C%20I'm%20interested%20in%20Ethnic%20Wear%20rental.">Book via WhatsApp</a>
-  </div>
+  </section>
 
-  <!-- Western Wear -->
-  <div class="https://your-github-link/1000022161.jpg">
+  <section class="section">
+    <img src="1000022161.jpg" alt="Western Wear">
     <h2>Western Wear</h2>
-    <p>Trendy dresses, gowns, and jumpsuits for casual and party outings.</p>
+    <p>Trendy dresses, gowns, and Indo-Western outfits for every occasion.</p>
     <a class="whatsapp-btn" href="https://wa.me/918478901298?text=Hi%2C%20I'm%20interested%20in%20Western%20Wear%20rental.">Book via WhatsApp</a>
-  </div>
+  </section>
 
-  <!-- Party Wear -->
-  <div class="https://your-github-link/1000022160.jpg">
+  <section class="section">
+    <img src="1000022160.jpg" alt="Party Wear">
     <h2>Party Wear</h2>
-    <p>Glamorous outfits for birthdays, bachelorettes, and more!</p>
+    <p>Show-stopping outfits to make you shine at any celebration!</p>
     <a class="whatsapp-btn" href="https://wa.me/918478901298?text=Hi%2C%20I'm%20interested%20in%20Party%20Wear%20rental.">Book via WhatsApp</a>
-  </div>
+  </section>
 
-  <!-- Footer -->
-  <div class="footer">
-    &copy; 2025 GlamOnRent | Powered by Fashion, Designed for You
-  </div>
+  <section>
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mvgazayv" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
+  <footer>
+    © 2025 GlamOnRent. All rights reserved.
+  </footer>
 </body>
 </html>
