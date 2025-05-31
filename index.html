@@ -1,235 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GlamOnRent</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlamOnRent Catalogue</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff8f0;
+      font-family: Arial, sans-serif;
+      background-color: #fefefe;
       margin: 0;
       padding: 0;
-    }
-
-    header {
-      background-color: #ff69b4;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header img {
-      height: 50px;
-      vertical-align: middle;
-    }
-
-    header h1 {
-      display: inline;
-      margin-left: 10px;
-      font-size: 24px;
-      vertical-align: middle;
-    }
-
-    section {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .section h2 {
-      color: #ff1493;
-      margin-top: 15px;
-    }
-
-    .section p {
       color: #333;
     }
 
-    .whatsapp-btn {
-      display: inline-block;
+    header {
+      background-color: #ff007f;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .catalogue {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .item {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+
+    .item:hover {
+      transform: scale(1.02);
+    }
+
+    .item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .item p {
+      padding: 0.5rem 1rem;
+      margin: 0;
+      font-weight: bold;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .whatsapp-button {
+      display: block;
+      width: 90%;
+      max-width: 300px;
+      margin: 2rem auto;
+      padding: 1rem;
       background-color: #25d366;
       color: white;
-      padding: 10px 20px;
-      margin-top: 10px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    form {
-      background: #fff;
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    form button {
-      background-color: #ff1493;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    footer {
+      font-size: 1.2rem;
       text-align: center;
-      padding: 15px;
-      background-color: #f0f0f0;
-      font-size: 14px;
-      color: #555;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 480px) {
+      header {
+        font-size: 1.5rem;
+        padding: 0.8rem;
+      }
+
+      .item p {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <img src="logo.png" alt="GlamOnRent Logo" />
-    <h1>GlamOnRent</h1>
-  </header>
-
-  <section>
-    <p>Stylish ethnic, western, and partywear for females aged 10 to 45 — available for rent in Kolkata!</p>
-  </section>
-
-  <section class="section">
-    <img src="1000022162.jpg" alt="Ethnic Wear">
-    <h2>Ethnic Wear</h2>
-    <p>Graceful sarees, lehengas, and salwar suits for weddings & festivals.</p>
-    <a class="whatsapp-btn" href="https://wa.me/918478901298?text=Hi%2C%20I'm%20interested%20in%20Ethnic%20Wear%20rental.">Book via WhatsApp</a>
-  </section>
-
-  <section class="section">
-    <img src="1000022161.jpg" alt="Western Wear">
-    <h2>Western Wear</h2>
-    <p>Trendy dresses, gowns, and Indo-Western outfits for every occasion.</p>
-    <a class="whatsapp-btn" href="https://wa.me/918478901298?text=Hi%2C%20I'm%20interested%20in%20Western%20Wear%20rental.">Book via WhatsApp</a>
-  </section>
-
-  <section class="section">
-    <img src="1000022160.jpg" alt="Party Wear">
-    <h2>Party Wear</h2>
-    <p>Show-stopping outfits to make you shine at any celebration!</p>
-    <a class="whatsapp-btn" href="https://wa.me/918478901298?text=Hi%2C%20I'm%20interested%20in%20Party%20Wear%20rental.">Book via WhatsApp</a>
-  </section>
-
-  <section>
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/mvgazayv" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    © 2025 GlamOnRent. All rights reserved.
-  </footer>
+  <header>GlamOnRent - Saree Catalogue</header>
+  <div class="catalogue">
+    <div class="item">
+      <img src="IMG_20250501_150319.jpg" alt="Pure Pochampalli Till blue colour" />
+      <p>Pure Pochampalli Till blue colour</p>
+    </div>
+    <div class="item">
+      <img src="IMG20250501145321.jpg" alt="Designer Jimmy choo mauve pink Colour" />
+      <p>Designer Jimmy choo mauve pink Colour</p>
+    </div>
+    <div class="item">
+      <img src="Red and white soft silk saree.jpg" alt="Red and white soft silk saree" />
+      <p>Red and white soft silk saree</p>
+    </div>
+    <div class="item">
+      <img src="Pure gadoal blue colour Ganga yamuna par.jpg" alt="Pure gadoal blue colour Ganga yamuna par" />
+      <p>Pure gadoal blue colour Ganga yamuna par</p>
+    </div>
+    <div class="item">
+      <img src="Pink colour pure silk full weaving.jpg" alt="Pink colour pure silk full weaving" />
+      <p>Pink colour pure silk full weaving</p>
+    </div>
+    <div class="item">
+      <img src="Black colour designer net saree.jpg" alt="Black colour designer net saree" />
+      <p>Black colour designer net saree</p>
+    </div>
+    <div class="item">
+      <img src="Pure Kanjivaram sea green colour with Rani Par.jpg" alt="Pure Kanjivaram sea green colour with Rani Par" />
+      <p>Pure Kanjivaram sea green colour with Rani Par</p>
+    </div>
+    <div class="item">
+      <img src="Designer Muslin navy blue colour party wear.jpg" alt="Designer Muslin navy blue colour party wear" />
+      <p>Designer Muslin navy blue colour party wear</p>
+    </div>
+    <div class="item">
+      <img src="Designer Muslin sea green colour party wear.jpg" alt="Designer Muslin sea green colour party wear" />
+      <p>Designer Muslin sea green colour party wear</p>
+    </div>
+    <div class="item">
+      <img src="Red Banarasi full weaving.jpg" alt="Red Banarasi full weaving" />
+      <p>Red Banarasi full weaving</p>
+    </div>
+    <div class="item">
+      <img src="Kora Banarasi peach pink colour dual tone.jpg" alt="Kora Banarasi peach pink colour dual tone" />
+      <p>Kora Banarasi peach pink colour dual tone</p>
+    </div>
+  </div>
+  <a href="https://wa.me/yourwhatsapplink" class="whatsapp-button">Book on WhatsApp</a>
 </body>
+
 </html>
-<div class="catalog grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
-  <!-- 1 -->
-  <div class="border rounded-2xl shadow p-4">
-    <img src="IMG_20250501_150319.jpg" alt="Pure Pochampalli" class="rounded-xl mb-2 w-full object-cover h-64">
-    <h2 class="text-lg font-semibold">Pure Pochampalli – Till Blue</h2>
-    <p>Elegant traditional saree in till blue colour, perfect for festive wear.</p>
-  </div>
-
-  <!-- 2 -->
-  <div class="border rounded-2xl shadow p-4">
-    <img src="IMG20250501145321.jpg" alt="Designer Jimmy Choo" class="rounded-xl mb-2 w-full object-cover h-64">
-    <h2 class="text-lg font-semibold">Designer Jimmy Choo – Mauve Pink</h2>
-    <p>Stylish party wear designer saree in a beautiful mauve pink tone.</p>
-  </div>
-
-  <!-- 3 -->
-  <div class="border rounded-2xl shadow p-4">
-    <img src="images/1000023100.jpg" alt="Red and White Soft Silk" class="rounded-xl mb-2 w-full object-cover h-64">
-    <h2 class="text-lg font-semibold">Soft Silk – Red & White</h2>
-    <p>Soft silk saree in classic red and white combination with smooth texture.</p>
-  </div>
-
-  <!-- 4 -->
-  <div class="border rounded-2xl shadow p-4">
-    <img src="images/1000023099.jpg" alt="Pure Gadwal" class="rounded-xl mb-2 w-full object-cover h-64">
-    <h2 class="text-lg font-semibold">Pure Gadwal – Blue with Ganga Yamuna Par</h2>
-    <p>Authentic Gadwal silk saree in vibrant blue with contrasting borders.</p>
-  </div>
-
-  <!-- 5 -->
-  <div class="border rounded-2xl shadow p-4">
-    <img src="images/1000023098.jpg" alt="Pink Silk Full Weaving" class="rounded-xl mb-2 w-full object-cover h-64">
-    <h2 class="text-lg font-semibold">Pure Silk – Pink Full Weaving</h2>
-    <p>Delicate pink saree with all-over intricate weaving design.</p>
-  </div>
-
-  <!-- 6 -->
-  <div class="border rounded-2xl shadow p-4">
-    <img src="images/1000023097.jpg" alt="Necklace Katan Dual Tone" class="rounded-xl mb-2 w-full object-cover h-64">
-    <h2 class="text-lg font-semibold">Necklace Katan – Dual Tone Purple</h2>
-    <p>Rich dual tone purple katan saree with a luxurious look and feel.</p>
-  </div>
-
-  <!-- 7 -->
-  <div class="border rounded-2xl shadow p-4">
-    <img src="images/1000023095.jpg" alt="Black Designer Net" class="rounded-xl mb-2 w-full object-cover h-64">
-    <h2 class="text-lg font-semibold">Designer Net – Black</h2>
-    <p>Stunning black net saree with designer embellishments for special occasions.</p>
-  </div>
-
-  <!-- 8 -->
-  <div class="border rounded-2xl shadow p-4">
-    <img src="images/1000023092.jpg" alt="Pure Kanjivaram Sea Green" class="rounded-xl mb-2 w-full object-cover h-64">
-    <h2 class="text-lg font-semibold">Pure Kanjivaram – Sea Green with Rani Par</h2>
-    <p>Regal sea green Kanjivaram silk saree paired with a rich rani pink border.</p>
-  </div>
-
-  <!-- 9 -->
-  <div class="border rounded-2xl shadow p-4">
-    <img src="images/1000023091.jpg" alt="Navy Blue Muslim Party Wear" class="rounded-xl mb-2 w-full object-cover h-64">
-    <h2 class="text-lg font-semibold">Designer Muslim Party Wear – Navy Blue</h2>
-    <p>Elegant navy blue designer saree ideal for evening and party events.</p>
-  </div>
-
-  <!-- 10 -->
-  <div class="border rounded-2xl shadow p-4">
-    <img src="images/1000023088.jpg" alt="Sea Green Muslim Party Wear" class="rounded-xl mb-2 w-full object-cover h-64">
-    <h2 class="text-lg font-semibold">Designer Muslim Party Wear – Sea Green</h2>
-    <p>Graceful sea green party wear saree with modest yet modern design.</p>
-  </div>
-
-  <!-- 11 -->
-  <div class="border rounded-2xl shadow p-4">
-    <img src="images/1000023080.jpg" alt="Red Banarasi Full Weaving" class="rounded-xl mb-2 w-full object-cover h-64">
-    <h2 class="text-lg font-semibold">Red Banarasi – Full Weaving</h2>
-    <p>Traditional Banarasi saree in bold red, featuring exquisite weaving throughout.</p>
-  </div>
-
-  <!-- 12 -->
-  <div class="border rounded-2xl shadow p-4">
-    <img src="images/1000023077.jpg" alt="Tanchoi Banarasi Peach Pink" class="rounded-xl mb-2 w-full object-cover h-64">
-    <h2 class="text-lg font-semibold">Tanchoi Banarasi – Peach Pink Dual Tone</h2>
-    <p>Graceful dual tone peach-pink Tanchoi Banarasi with soft shine and texture.</p>
-  </div>
-</div>
-
